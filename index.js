@@ -74,7 +74,12 @@ async function run() {
             const order = req.body;
             const result = await orderCollection.insertOne(order);
             res.send(result);
+        });
+
+        app.get('/hero', async(req, res) =>{
+            res.send('Hero meets hero ku')
         })
+
 
     }
     finally {
